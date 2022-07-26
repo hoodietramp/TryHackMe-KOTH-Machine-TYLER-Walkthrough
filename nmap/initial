@@ -1,0 +1,97 @@
+# Nmap 7.92 scan initiated Sun Jul 24 02:15:05 2022 as: nmap -sC -sV -oN nmap/initial 10.10.243.130
+Nmap scan report for tyler.thm (10.10.243.130)
+Host is up (0.34s latency).
+Not shown: 992 closed tcp ports (conn-refused)
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 46:6c:5a:31:5f:c1:1f:f3:65:e7:64:f2:c5:f5:59:d8 (RSA)
+|   256 5d:a5:8a:af:1e:21:48:7a:04:22:3e:4a:f5:e4:5b:02 (ECDSA)
+|_  256 6a:44:1c:e1:15:c9:5e:94:da:06:8d:db:d2:bc:66:54 (ED25519)
+80/tcp   open  http        Apache httpd 2.4.6 ((CentOS) PHP/7.3.16)
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/7.3.16
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: SAMBA)
+445/tcp  open  netbios-ssn Samba smbd 4.9.1 (workgroup: SAMBA)
+3306/tcp open  mysql       MariaDB (unauthorized)
+5000/tcp open  http        Werkzeug httpd 1.0.0 (Python 3.6.8)
+|_http-title: Tyler's file upload
+8080/tcp open  http        nginx 1.16.1
+|_http-server-header: nginx/1.16.1
+| http-title: LibreNMS
+|_Requested resource was http://tyler.thm:8080/login
+| http-robots.txt: 1 disallowed entry 
+|_/
+9999/tcp open  abyss?
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Accept-Ranges: bytes
+|     Content-Length: 6
+|     Content-Type: text/plain; charset=utf-8
+|     Last-Modified: Sat, 23 Jul 2022 20:45:38 GMT
+|     Date: Sat, 23 Jul 2022 20:45:38 GMT
+|     h00dy
+|   GenericLines, Help, Kerberos, LPDString, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|_    Request
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9999-TCP:V=7.92%I=7%D=7/24%Time=62DC5DF2%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,BE,"HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nConte
+SF:nt-Length:\x206\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nLas
+SF:t-Modified:\x20Sat,\x2023\x20Jul\x202022\x2020:45:38\x20GMT\r\nDate:\x2
+SF:0Sat,\x2023\x20Jul\x202022\x2020:45:38\x20GMT\r\n\r\nh00dy\n")%r(HTTPOp
+SF:tions,BE,"HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nContent-
+SF:Length:\x206\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nLast-M
+SF:odified:\x20Sat,\x2023\x20Jul\x202022\x2020:45:38\x20GMT\r\nDate:\x20Sa
+SF:t,\x2023\x20Jul\x202022\x2020:45:38\x20GMT\r\n\r\nh00dy\n")%r(FourOhFou
+SF:rRequest,BE,"HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nConte
+SF:nt-Length:\x206\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nLas
+SF:t-Modified:\x20Sat,\x2023\x20Jul\x202022\x2020:45:38\x20GMT\r\nDate:\x2
+SF:0Sat,\x2023\x20Jul\x202022\x2020:45:38\x20GMT\r\n\r\nh00dy\n")%r(Generi
+SF:cLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/
+SF:plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Re
+SF:quest")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent
+SF:-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n4
+SF:00\x20Bad\x20Request")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\
+SF:r\n\r\n400\x20Bad\x20Request")%r(SSLSessionReq,67,"HTTP/1\.1\x20400\x20
+SF:Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConn
+SF:ection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(TerminalServerCookie,
+SF:67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\
+SF:x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(TLSSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x2
+SF:0Bad\x20Request")%r(Kerberos,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Content-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r
+SF:\n\r\n400\x20Bad\x20Request")%r(LPDString,67,"HTTP/1\.1\x20400\x20Bad\x
+SF:20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnectio
+SF:n:\x20close\r\n\r\n400\x20Bad\x20Request");
+Service Info: Host: TYLER
+
+Host script results:
+| smb2-time: 
+|   date: 2022-07-23T20:47:13
+|_  start_date: N/A
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.9.1)
+|   Computer name: tyler
+|   NetBIOS computer name: TYLER\x00
+|   Domain name: \x00
+|   FQDN: tyler
+|_  System time: 2022-07-23T16:47:14-04:00
+|_clock-skew: mean: 1h20m01s, deviation: 2h18m39s, median: -1s
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: TYLER, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 24 02:17:28 2022 -- 1 IP address (1 host up) scanned in 143.31 seconds

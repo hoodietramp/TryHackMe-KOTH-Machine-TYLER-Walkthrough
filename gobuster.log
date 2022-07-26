@@ -1,0 +1,17 @@
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://tyler.thm
+[+] Method:                  GET
+[+] Threads:                 30
+[+] Wordlist:                /home/h00dy/ctf/thm/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/07/24 02:36:31 Starting gobuster in directory enumeration mode
+===============================================================
+
+/upload               (Status: 301) [Size: 232] [--> http://tyler.thm/upload/]
+/betatest             (Status: 301) [Size: 232] [--> http://tyler.thm/betatest/]
