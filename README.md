@@ -16,13 +16,11 @@
 8080
 ```
 
-<!-- ![image](/home/h00dy/Pictures/Screenshots/2022-07-26_21-55.png) -->
-
-image.png
+![image](images/nmap.png)
 
 ##### Initial access -<br/> 
 
-![image](image.png)
+![image](images/smb.png)
 
 ```
 smbclient //tyler.thm/public
@@ -61,4 +59,4 @@ Then just do, `sudo bash` voilà you're root<br/>
 nc -lnvp <port>
 ```
 
-![image](image.png)
+![image](images/upload-port.png)
