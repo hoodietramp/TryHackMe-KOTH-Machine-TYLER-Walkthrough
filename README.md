@@ -16,7 +16,9 @@
 8080
 ```
 
-![image](/home/h00dy/Pictures/Screenshots/2022-07-26_21-55.png)
+<!-- ![image](/home/h00dy/Pictures/Screenshots/2022-07-26_21-55.png) -->
+
+image.png
 
 ##### Initial access -<br/> 
 
