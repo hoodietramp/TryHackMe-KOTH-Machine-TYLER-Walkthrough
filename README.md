@@ -18,6 +18,16 @@
 
 ![image](images/nmap.png)
 
+
+##### Subdirectories -
+
+```
+/upload
+/betatest
+```
+
+![image](images/gobuster.png)
+
 ##### Initial access -<br/> 
 
 ![image](images/smb.png)
