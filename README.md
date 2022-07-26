@@ -16,7 +16,7 @@
 8080
 ```
 
-![image](image.png)
+![image](/home/h00dy/Pictures/Screenshots/2022-07-26_21-55.png)
 
 ##### Initial access -<br/> 
 
