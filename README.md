@@ -4,7 +4,9 @@
 ## IP: `10.10.243.130`<br />
 
 ----------------
-### Open Ports -<br/>
+### Open Ports Via Nmap -<br/>
+
+`nmap -sC -sV 10.10.243.130`
 
 ```
 22
@@ -19,7 +21,9 @@
 ![image](images/nmap.png)
 
 
-##### Subdirectories -
+##### Subdirectories Via Gobuster -<br />
+
+`gobuster dir -u http://10.10.243.130 -w /usr/share/dirbuster/directory-list-2.3-medium.txt `
 
 ```
 /upload
